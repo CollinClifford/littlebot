@@ -38,5 +38,5 @@ async def on_message(message):
 async def on_ready():
     print('Ready!')
 
-keep_alive()
+# keep_alive()
 client.run(my_secret)
