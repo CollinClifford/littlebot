@@ -1,9 +1,7 @@
 import discord
-import os
 import random
 from quotes import quotes
 from keep_alive import keep_alive
-from data_dude import da_collector
 from decouple import config
 
 my_secret = config('TOKEN')
