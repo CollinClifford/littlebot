@@ -26,7 +26,7 @@ discord==2.0.0
 discord.py==2.0.1
 distlib==0.3.4
 distro==1.7.0
-distro-info===1.1build1
+
 duplicity==0.8.21
 exceptiongroup==1.0.0rc9
 fasteners==0.14.1
