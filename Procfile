@@ -1,2 +1,2 @@
 worker: python main.py
-web: gunicorn gettingstarted.wsgi
+web: gunicorn --bind 0.0.0.0:$PORT flaskapp:app

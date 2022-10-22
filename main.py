@@ -4,7 +4,19 @@ from quotes import quotes
 from keep_alive import keep_alive
 from decouple import config
 from data_dude import da_collector
+from flask import Flask
 
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return "<h1> Deployed to Heroku</h1>"
+
+
+if __name__ == "__main__":
+    app.run()
+    
 my_secret = config('TOKEN')
 
 intents = discord.Intents.default()
