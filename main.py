@@ -7,7 +7,7 @@ from data_dude import da_collector
 from flask import Flask
 
     
-my_secret = config('TOKEN')
+# my_secret = config('TOKEN')
 
 intents = discord.Intents.default()
 
