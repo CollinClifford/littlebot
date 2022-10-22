@@ -75,7 +75,7 @@ pyparsing==2.4.7
 pyRFC3339==1.1
 PySocks==1.7.1
 python-dateutil==1.5
-python-decouple==3.6
+python-decouple==3.1
 pytz==2022.1
 pyxdg==0.27
 PyYAML==5.4.1
