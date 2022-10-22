@@ -1,2 +1,2 @@
 worker: python main.py
-web: gunicorn flaskapp:app
+web: gunicorn run:my_awesome_app
