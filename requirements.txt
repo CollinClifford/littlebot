@@ -1,6 +1,6 @@
 aiohttp==3.8.3
 aiosignal==1.2.0
-apturl==0.5.2
+
 argcomplete==2.0.0
 astroid==2.12.11
 async-generator==1.10
