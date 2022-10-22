@@ -2,7 +2,7 @@ import discord
 import random
 from quotes import quotes
 from keep_alive import keep_alive
-from decouple import config
+# from decouple import config
 from data_dude import da_collector
 from flask import Flask
 
@@ -50,4 +50,4 @@ async def on_ready():
     print('Ready!')
 
 # keep_alive()
-client.run(my_secret)
+client.run("MTAwNTk5MTI4MTU3NjY0NDY5OA.G-5rYE.k0HM68FMyEKY0SM1NrFIzWB2T0C0SZXzRyngUM")
