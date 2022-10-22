@@ -43,7 +43,7 @@ async def on_message(message):
     if message.content.startswith("$quote"):
         await message.channel.send(random.choice(quotes))
     
-    if message.content.startwirth('Hi littlebot'):
+    if message.content.startswith('Hi littlebot'):
         await message.channel.send(f'Hi {message.author}!')
     
     await da_collector(message)
