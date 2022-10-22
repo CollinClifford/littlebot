@@ -3,10 +3,19 @@ import random
 from quotes import quotes
 from keep_alive import keep_alive
 from decouple import config
+from data_dude import da_collector
 
 my_secret = config('TOKEN')
 
-client = discord.Client(intents=discord.Intents.default())
+intents = discord.Intents.default()
+
+intents.message_content = True
+
+client = discord.Client(intents=intents)
+
+@client.event
+async def on_connect():
+    print("Connected")
 
 @client.event
 async def on_ready():
@@ -32,8 +41,8 @@ async def on_message(message):
     if message.content.startswith("$quote"):
         await message.channel.send(random.choice(quotes))
     
-    # da_collector(message)
-        
+    await da_collector(message)
+   
 @client.event
 async def on_ready():
     print('Ready!')
