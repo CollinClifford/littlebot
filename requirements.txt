@@ -68,9 +68,9 @@ protobuf==3.12.4
 ptyprocess==0.7.0
 pycairo==1.20.1
 pycodestyle==2.9.1
-pycups==2.0.1
+
 pyflakes==2.5.0
-PyGObject==3.42.1
+
 PyJWT==2.3.0
 pylint==2.15.4
 pymacaroons==0.13.0
