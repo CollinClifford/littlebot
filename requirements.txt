@@ -106,6 +106,6 @@ Werkzeug==2.2.2
 wrapt==1.14.1
 wsproto==1.2.0
 xdg==5
-xkit==0.0.0
+
 yarl==1.8.1
 zipp==1.0.0
