@@ -4,7 +4,7 @@ from data_dude import da_collector
 from setup import client
 
 
-def handle_message(message):
+async def handle_message(message):
     if message.author == client.user:
         return
 
