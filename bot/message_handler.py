@@ -14,7 +14,8 @@ async def handle_message(message):
     if message.content == "$quote":
         await message.channel.send(random.choice(quotes))
     elif message.content == "$books":
-        await message.channel.send(total_books)
+        for indx, book in enumerate(total_books):
+            await message.channel.send(f'{indx + 1}) {book}')
 
     # --- TEXT TRIGGERS --- #
 
