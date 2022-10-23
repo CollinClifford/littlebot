@@ -1,23 +1,31 @@
-from setup import client
-from setup import set_up
+import discord
+from decouple import config
 from message_handler import handle_message
 from keep_alive import keep_alive
 
+intents = discord.Intents.default()
+intents.message_content = True
 
-set_up()
+client = discord.Client(intents=intents)
+
+my_secret = config('TOKEN')
+print(my_secret)
+
+client.run(my_secret)
+
 
 @client.event
-def on_connect():
+async def on_connect():
     print("Connected")
 
 
 @client.event
-def on_ready():
+async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
 
 @client.event
-def on_ready():
+async def on_ready():
     print('Ready!')
 
 
