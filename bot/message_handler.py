@@ -1,31 +1,10 @@
-import discord
 import random
-from quotes import quotes
-from keep_alive import keep_alive
-from decouple import config
+from bot.quotes import quotes
 from data_dude import da_collector
-from flask import Flask
+from setup import client
 
-    
-my_secret = config('TOKEN')
 
-intents = discord.Intents.default()
-
-intents.message_content = True
-
-client = discord.Client(intents=intents)
-
-@client.event
-async def on_connect():
-    print("Connected")
-
-@client.event
-async def on_ready():
-    print('We have logged in as {0.user}'.format(client))
-
-@client.event
-async def on_message(message):
-    
+def handle_message(message):
     if message.author == client.user:
         return
 
@@ -42,15 +21,9 @@ async def on_message(message):
 
     if message.content.startswith("$quote"):
         await message.channel.send(random.choice(quotes))
-    
-    if message.content.startswith('Hi littlebot'):
-        await message.channel.send(f'Hi {message.author}!')
-    
-    await da_collector(message)
-   
-@client.event
-async def on_ready():
-    print('Ready!')
 
-# keep_alive()
-client.run(config("TOKEN"))
+    if message.content.startswith('Hi littlebot'):
+        name = message.authorsplit('#')[0]
+        await message.channel.send(f'Hi {name}!')
+
+    await da_collector(message)
