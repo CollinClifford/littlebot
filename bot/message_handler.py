@@ -23,7 +23,7 @@ def handle_message(message):
         await message.channel.send(random.choice(quotes))
 
     if message.content.startswith('Hi littlebot'):
-        name = message.authorsplit('#')[0]
+        name = message.author.split('#')[0]
         await message.channel.send(f'Hi {name}!')
 
     await da_collector(message)
