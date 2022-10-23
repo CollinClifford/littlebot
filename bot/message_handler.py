@@ -1,4 +1,5 @@
 import random
+from books import total_books
 from bot.quotes import quotes
 from data_dude import da_collector
 from setup import client
@@ -6,7 +7,16 @@ from setup import client
 
 async def handle_message(message):
     if message.author == client.user:
-        return
+        pass
+
+    # --- COMMANDS --- #
+
+    if message.content == "$quote":
+        await message.channel.send(random.choice(quotes))
+    elif message.content == "$books":
+        await message.channel.send(total_books)
+
+    # --- TEXT TRIGGERS --- #
 
     if message.content.lower().startswith(
             'ho') or message.content.lower().find('ho ho') != -1:
@@ -19,11 +29,10 @@ async def handle_message(message):
     ).find("hungry") != -1 or message.content.lower().find("sad") != -1:
         await message.channel.send('Put a tiger in your tank!')
 
-    if message.content.startswith("$quote"):
-        await message.channel.send(random.choice(quotes))
-
     if message.content.startswith('Hi littlebot'):
         name = message.author.split('#')[0]
         await message.channel.send(f'Hi {name}!')
+
+    # --- DATA COLLECTION --- #
 
     await da_collector(message)
