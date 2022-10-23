@@ -22,8 +22,8 @@ def on_ready():
 
 
 @client.event
-def on_message(message):
-    handle_message(message)
+async def on_message(message):
+    await handle_message(message)
 
 
 keep_alive()
