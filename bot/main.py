@@ -1,17 +1,6 @@
-import discord
-from decouple import config
+from setup import client, my_secret
 from message_handler import handle_message
 from keep_alive import keep_alive
-
-intents = discord.Intents.default()
-intents.message_content = True
-
-client = discord.Client(intents=intents)
-
-my_secret = config('TOKEN')
-print(my_secret)
-
-client.run(my_secret)
 
 
 @client.event
@@ -33,5 +22,5 @@ async def on_ready():
 async def on_message(message):
     await handle_message(message)
 
-
+client.run(my_secret)
 keep_alive()
