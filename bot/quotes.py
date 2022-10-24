@@ -112,3 +112,5 @@ quotes = [
 
   ""
 ]
+
+# Hey, Brian.  Gonna make this a JSON document so we can have structure quotes. eg. { 1q84: {"irretrievably lost", ...}, GlassBees: {"..."}}
