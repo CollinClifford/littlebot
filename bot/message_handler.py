@@ -32,7 +32,7 @@ async def handle_message(message):
 
     if message.content.startswith('Hi littlebot'):
         name = message.author.split('#')[0]
-        await message.channel.send(f'Hi {name}!')
+        await message.channel.send(f'Hi {message.author.split("#")[0]}!')
 
     # --- DATA COLLECTION --- #
 
