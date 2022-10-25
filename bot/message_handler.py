@@ -2,12 +2,12 @@ import random
 from books import total_books
 from bot.quotes import quotes
 # from data_dude import da_collector
-from setup import client
+from setup import discord_client
 from quotes2 import quotes2
 
 
 async def handle_message(message):
-    if message.author == client.user:
+    if message.author == discord_client.user:
         return
 
     # --- COMMANDS --- #
