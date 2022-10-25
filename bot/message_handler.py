@@ -38,7 +38,8 @@ async def handle_message(message):
         await quotes.append(message.content)
 
     if message.content == "$quote" and message.content.contains("Collin"):
-        await message.channel.send(random.choice(quotes2['Collin']))
+        # await message.channel.send(random.choice(quotes2['Collin']))
+        print(random.choice[quotes2])
     elif message.content == "$quote" and message.content.contains("1Q84"):
         await message.channel.send(random.choice(quotes2['1Q84']))
     elif message.content == "$quote" and message.content.contains("The Glass Bees"):
