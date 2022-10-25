@@ -1,7 +1,7 @@
 import random
 from books import total_books
 from bot.quotes import quotes
-from data_dude import da_collector
+# from data_dude import da_collector
 from setup import client
 from quotes2 import quotes2
 
@@ -38,8 +38,8 @@ async def handle_message(message):
         await quotes.append(message.content)
 
     if message.content == "$quote" and message.content.contains("1Q84"):
-        await message.channel.send(random.choice(quotes2['1Q84']))
+        await message.channel.send(random.choice(quotes2['Collin']))
         
     # --- DATA COLLECTION --- #
 
-    await da_collector(message)
+    # await da_collector(message)
