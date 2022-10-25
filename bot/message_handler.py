@@ -3,11 +3,7 @@ from books import total_books
 from bot.quotes import quotes
 # from data_dude import da_collector
 from setup import client
-import json
-
-f = open('quotes2.json')
-data = json.load(f)
-print(data)
+from quotes2 import quotes2
 
 async def handle_message(message):
     if message.author == client.user:
@@ -17,7 +13,6 @@ async def handle_message(message):
 
     if message.content == "$quote":
         await message.channel.send(random.choice(quotes))
-        await print(data)
     elif message.content == "$books":
         for indx, book in enumerate(total_books):
             await message.channel.send(f'{indx + 1}) {book}')
@@ -42,12 +37,12 @@ async def handle_message(message):
     # if message.content == "$addquote":
     #     await quotes.append(message.content)
 
-    # if message.content == "$quote" and message.content.contains("Collin"):
-    #     await message.channel.send(random.choice(data['Collin']))
-    # elif message.content == "$quote" and message.content.contains("1Q84"):
-    #     await message.channel.send(random.choice(data['1Q84']))
-    # elif message.content == "$quote" and message.content.contains("The Glass Bees"):
-    #     await message.channel.send(random.choice(data['The Glass Bees']))
+    if message.content == "$quote" and message.content.contains("Collin"):
+        await message.channel.send(quotes2.get(random.choice('Collin')))
+    elif message.content == "$quote" and message.content.contains("1Q84"):
+        await message.channel.send(quotes2.get(random.choice('1Q84')))
+    elif message.content == "$quote" and message.content.contains("The Glass Bees"):
+        await message.channel.send(quotes2.get(random.choice('The Glass Bees')))
            
         
     # --- DATA COLLECTION --- #

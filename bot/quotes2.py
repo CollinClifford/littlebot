@@ -1,4 +1,4 @@
-{
+quotes2 = {
   "1Q84": [
     "If you can love someone with your whole heart, even one person, then there's salvation in life. Even if you can't get together with that person.",
 
@@ -66,7 +66,7 @@
 
     "Once you pass a certain age, life becomes nothing more than a process of continual loss. Things that are important to your life begin to slip out of your grasp, one after another, like a come losing teeth. And the only things that come to take their place are worthless imitations. Your physical strength, your hopes, your dreams, your ideals, your convictions, all meaning, or then again, the people you love: one by one, they fade away. Some announce their departure before they leave, while others just disappear all of a sudden without warning one day. And once you lose them you can never get them back. Your search for replacements never goes well. It’s all very painful – as painful as actually being cut with a knife.  The body is not the only target of rape. Violence does not always take a visible form, and not all wounds gush blood. "
   ],
-"The Glass Bees": [
+  "The Glass Bees": [
     "Some people are allergic to strawberries or lobster or any red foods and cannot even look at them. Others, like myself, for instance, cannot bear to see cut-off ears ",
     "All the systems which explain so precisely why the world is as it is and why it can never be otherwise, have always called forth in me the same kind of uneasiness one has when face to face with the regulations displayed under the glaring lights of a prison cell. Even if one had been born in prison and had never seen the stars or seas or woods, one would instinctively know of timeless freedom in unlimited space."
   ],
