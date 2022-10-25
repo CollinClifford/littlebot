@@ -5,8 +5,9 @@ from bot.quotes import quotes
 from setup import client
 import json
 
-f = open('quotes2.json')
-data = json.load(f)
+# f = open('quotes2.json')
+# data = json.load(f)
+# print(data)
 
 async def handle_message(message):
     if message.author == client.user:
