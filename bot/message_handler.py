@@ -38,12 +38,12 @@ async def handle_message(message):
     # if message.content == "$addquote":
     #     await quotes.append(message.content)
 
-    # if message.content == "$quote" and message.content.contains("Collin"):
-    #     await message.channel.send(quotes2[random.choice('Collin')])
-    # elif message.content == "$quote" and message.content.contains("1Q84"):
-    #     await message.channel.send(quotes2[random.choice('1Q84')])
-    # elif message.content == "$quote" and message.content.contains("The Glass Bees"):
-    #     await message.channel.send(quotes2[random.choice('The Glass Bees')])
+    if message.content.contains("$quote") and message.content.contains("Collin"):
+        await message.channel.send(quotes2[random.choice('Collin')])
+    elif message.content == "$quote" and message.content.contains("1Q84"):
+        await message.channel.send(quotes2[random.choice('1Q84')])
+    elif message.content == "$quote" and message.content.contains("The Glass Bees"):
+        await message.channel.send(quotes2[random.choice('The Glass Bees')])
            
         
     # --- DATA COLLECTION --- #
