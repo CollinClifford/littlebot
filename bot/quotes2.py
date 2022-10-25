@@ -108,5 +108,8 @@ quotes2 = {
     "Some people are allergic to strawberries or lobster or any red foods and cannot even look at them. Others, "
     "like myself, for instance, cannot bear to see cut-off ears ",
     "All the systems which explain so precisely why the world is as it is and why it can never be otherwise, have always called forth in me the same kind of uneasiness one has when face to face with the regulations displayed under the glaring lights of a prison cell. Even if one had been born in prison and had never seen the stars or seas or woods, one would instinctively know of timeless freedom in unlimited space."
+  },
+  "Collin": {
+    "Fuck you, eh?"
   }
 }
