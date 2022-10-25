@@ -3,7 +3,7 @@ from books import total_books
 from bot.quotes import quotes
 from data_dude import da_collector
 from setup import client
-
+from quotes2 import quotes2
 
 async def handle_message(message):
     if message.author == client.user:
@@ -33,7 +33,13 @@ async def handle_message(message):
     if message.content.startswith('Hi littlebot'):
         name = message.author.split('#')[0]
         await message.channel.send(f'Hi {message.author.split("#")[0]}!')
+    
+    if message.content == "$addquote":
+        await quotes.append(message.content)
 
+    if message.content == "$quote" and message.content.contains("1Q84"):
+        await message.channel.send(random.choice(quotes2['1Q84']))
+        
     # --- DATA COLLECTION --- #
 
     await da_collector(message)
