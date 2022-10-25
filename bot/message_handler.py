@@ -41,10 +41,10 @@ async def handle_message(message):
 
     if message.content.startswith("$quote Collin"):
         await message.channel.send(quotes2["Collin"][randint(0, len(quotes2["Collin"]) - 1)])
-    elif message.content == "$quote" and message.content.contains("1Q84"):
-        await message.channel.send(quotes2[random.choice('1Q84')])
-    elif message.content == "$quote" and message.content.contains("The Glass Bees"):
-        await message.channel.send(quotes2[random.choice('The Glass Bees')])
+    elif message.content == "$quote 1Q84":
+        await message.channel.send(quotes2["1Q84"][randint(0, len(quotes2["1Q84"]) - 1)])
+    elif message.content == "$quote The Glass Bees":
+        await message.channel.send(quotes2["The Glass Bees"][randint(0, len(quotes2["The Glass Bees"]) - 1)])
            
         
     # --- DATA COLLECTION --- #
