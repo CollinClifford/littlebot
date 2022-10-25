@@ -14,11 +14,6 @@ async def on_ready():
 
 
 @client.event
-async def on_ready():
-    print('Ready!')
-
-
-@client.event
 async def on_message(message):
     await handle_message(message)
 
