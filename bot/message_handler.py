@@ -5,17 +5,18 @@ from bot.quotes import quotes
 from setup import client
 from quotes2 import quotes2
 
+
 async def handle_message(message):
     if message.author == client.user:
-        pass
+        return
 
     # --- COMMANDS --- #
 
     if message.content == "$quote":
         await message.channel.send(random.choice(quotes))
     elif message.content == "$books":
-        for indx, book in enumerate(total_books):
-            await message.channel.send(f'{indx + 1}) {book}')
+        for indx, book in enumerate(total_books, start=1):
+            await message.channel.send(f'{indx}) {book}')
 
     # --- TEXT TRIGGERS --- #
 
