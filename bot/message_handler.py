@@ -16,7 +16,7 @@ async def handle_message(message):
     # --- COMMANDS --- #
 
     if message.content == "$quote":
-        await message.channel.send(random.choice(quotes))
+        await message.channel.send(random.choice(quotes)) and print(data)
     elif message.content == "$books":
         for indx, book in enumerate(total_books):
             await message.channel.send(f'{indx + 1}) {book}')
