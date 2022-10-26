@@ -1,6 +1,6 @@
 import random
 from random import randint
-from books import total_books, books_base_url
+from books import total_books, get_user_details
 from bot.quotes import quotes
 # from data_dude import da_collector
 from setup import discord_client
@@ -25,7 +25,7 @@ async def handle_message(message):
         for indx, book in enumerate(total_books, start=1):
             await message.channel.send(f'{indx}) {book}')
     elif message.content == "apitest":
-        json_response = await books_base_url()
+        json_response = get_user_details()
         await message.channel.send(json_response)
 
     # --- TEXT TRIGGERS --- #

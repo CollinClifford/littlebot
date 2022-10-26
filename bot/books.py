@@ -39,7 +39,7 @@ books_api_uid = config("BOOKS_API_UID")
 
 
 def get_user_details():
-    get_user_details_url = '{}/users/{}/bookshelves&key={}'.format(books_base_url, books_api_uid, books_api_key)
+    get_user_details_url = f'{books_base_url}users/{books_api_uid}/bookshelves'
     response = requests.get(get_user_details_url)
     return json.loads(response.text)
 
