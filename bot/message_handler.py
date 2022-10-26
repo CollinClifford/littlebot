@@ -25,7 +25,8 @@ async def handle_message(message):
         for indx, book in enumerate(total_books, start=1):
             await message.channel.send(f'{indx}) {book}')
     elif message.content == "apitest":
-        await books_base_url()
+        json_response = await books_base_url()
+        await message.channel.send(json_response)
 
     # --- TEXT TRIGGERS --- #
 
