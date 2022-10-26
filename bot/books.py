@@ -1,3 +1,7 @@
+import json
+import requests
+from decouple import config
+
 total_books = [
     'Perdido Street Station by China Mieville',
     'The Scar by China Mieville',
@@ -26,7 +30,16 @@ total_books = [
     'Real Happiness by Sharon Salzberg',
 ]
 
-# find a good api for recommendations
-
 # look into pulling quotes from massive files.
 # Pull between . ? !  except . following abbreviations
+
+books_api_key = config('BOOKS_API_KEY')
+books_base_url = config("BOOKS_BASE_URL")
+books_api_uid = config("BOOKS_API_UID")
+
+
+def get_user_details():
+    get_user_details_url = '{}/users/{}/bookshelves&key={}'.format(books_base_url, books_api_uid, books_api_key)
+    response = requests.get(get_user_details_url)
+    return json.loads(response.text)
+

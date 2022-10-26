@@ -1,5 +1,5 @@
 quotes = [
-  # ----- 1Q84 - Haruki Murakami ----- #
+    # ----- 1Q84 - Haruki Murakami ----- #
     "If you can love someone with your whole heart, even one person, then there's salvation in life. Even if you "
     "can't get together with that person.",
 
@@ -103,7 +103,7 @@ quotes = [
     "painful – as painful as actually being cut with a knife.",
     "The body is not the only target of rape. Violence does not always take a visible form, and not all wounds gush "
     "blood. "
-  
+
     # ----- The Glass Bees - Ernst Junger ----- #
     "Some people are allergic to strawberries or lobster or any red foods and cannot even look at them. Others, "
     "like myself, for instance, cannot bear to see cut-off ears ",
