@@ -34,7 +34,7 @@ total_books = [
 # Pull between . ? !  except . following abbreviations
 
 books_api_key = config('BOOKS_API_KEY')
-books_base_url = config("BOOKS_BASE_URL")
+books_base_url = config("BOOKS_API_BASE")
 books_api_uid = config("BOOKS_API_UID")
 
 
